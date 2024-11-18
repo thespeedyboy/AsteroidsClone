@@ -7,9 +7,12 @@ public class Playercontroler : MonoBehaviour
     [Header("Movement vals")]
     private float horizontalInput;
     [SerializeField] private float turnSpeed;
-    private float verticalInput;
     [SerializeField] private float thrustfForce;
     private Rigidbody rb;
+    [Header("shooting")]
+    public GameObject bullet;
+    public GameObject bulletSpawn;
+
     // happens one time in the first frame
     void Start()
     {
@@ -18,12 +21,21 @@ public class Playercontroler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rotashion
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
+
+        //shooting
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        }
     }
     private void FixedUpdate()
     {
-        verticalInput = Input.GetAxis("Vertical");
-        rb.AddRelativeForce(Vector3.forward * verticalInput * thrustfForce);
+        if (Input.GetButton("Fire2"))
+        {
+            rb.AddRelativeForce(Vector3.forward  * thrustfForce);
+        }
     }
 }
