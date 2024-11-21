@@ -117,8 +117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 1
   gm: {fileID: 0}
+  rb: {fileID: 0}
   smallerAsteroid: {fileID: 4049544772573825293, guid: 29bf04ca2056bfb4dbb15e6bb81e99f6, type: 3}
   SmallerAsteroidtoSpawn: 2
+  forceRange: 10
+  torqueRange: 10
 --- !u!114 &6647534863584636096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,10 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6848ffbe7ab87d24e81d7f3ceeadf4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -13
-  xMax: 13
-  zMin: -7
-  zMax: 7
+  xMin: -14
+  xMax: 14
+  zMin: -10
+  zMax: 10
 --- !u!1001 &6376636611435562849
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,14 +6,23 @@ public class astroedcontroler : MonoBehaviour
 {
     public int pointValue;
     public gamemanager gm;
+    public Rigidbody rb;
 
     [Header("Spliting")]
     public GameObject smallerAsteroid;
     public int SmallerAsteroidtoSpawn;
+    [Header("Random force variables")]
+    public float forceRange;
+    public float torqueRange;
+
 
     private void Start()
     {
         gm = GameObject.Find("gamemanager").GetComponent<gamemanager>();
+        rb = GetComponent<Rigidbody>();
+
+        AddRandomForce();
+        AddRandomTorque();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -38,5 +47,19 @@ public class astroedcontroler : MonoBehaviour
                 Instantiate(smallerAsteroid, transform.position, transform.rotation);
             }
         }
+    }
+    public void AddRandomForce()
+    {
+        float randomForceX = Random.Range(-forceRange, forceRange);
+        float randomForceZ = Random.Range(-forceRange, forceRange);
+        Vector3 randomForce = new Vector3(randomForceX, 0,  randomForceZ);
+
+        rb.AddForce(randomForce, ForceMode.Impulse);
+    }
+
+    public void AddRandomTorque()
+    {
+        float randomTorque = Random.Range(-torqueRange, torqueRange);
+        rb.AddTorque(Vector3.back * randomTorque, ForceMode.Impulse);
     }
 }

@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed37e311ef447564e803238b7b5ce49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  destroyDelay: 20
+  speed: 10
+  destroyDelay: 5
 --- !u!114 &1900995675439715741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6848ffbe7ab87d24e81d7f3ceeadf4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -20
-  xMax: 20
-  zMin: -7
-  zMax: 7
+  xMin: -14
+  xMax: 14
+  zMin: -10
+  zMax: 10

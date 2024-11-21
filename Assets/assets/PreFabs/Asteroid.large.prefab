@@ -101,7 +101,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &6009761966977093895
 MonoBehaviour:
@@ -117,8 +117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 1
   gm: {fileID: 0}
+  rb: {fileID: 0}
   smallerAsteroid: {fileID: 3826134074175560861, guid: 01932983412595640a505a0b8312e56e, type: 3}
   SmallerAsteroidtoSpawn: 2
+  forceRange: 10
+  torqueRange: 10
 --- !u!114 &4197099479187235152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,10 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6848ffbe7ab87d24e81d7f3ceeadf4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -13
-  xMax: 13
-  zMin: -7
-  zMax: 7
+  xMin: -14
+  xMax: 14
+  zMin: -10
+  zMax: 10
 --- !u!1001 &4467996579156724465
 PrefabInstance:
   m_ObjectHideFlags: 0
