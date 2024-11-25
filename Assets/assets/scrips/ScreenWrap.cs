@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class ScreenWrap : MonoBehaviour
 {
+    public gamemanager gm;
     [Header("Limits")]
     public float xMin;
     public float xMax;
     public float zMin;
     public float zMax;
+    private void Start()
+    {
+        gm = GameObject.Find("gamemanager").GetComponent<gamemanager>();
+        xMax = gm.xMax;
+        xMin = gm.xMin;
+        zMax = gm.zMax;
+        zMin = gm.zMin;
+    }
     void Update()
     {
         if (transform.position.x > xMax)
