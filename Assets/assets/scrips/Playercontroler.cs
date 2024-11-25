@@ -12,11 +12,14 @@ public class Playercontroler : MonoBehaviour
     [Header("shooting")]
     public GameObject bullet;
     public GameObject bulletSpawn;
+    [Header("GameManager")]
+    public gamemanager gm;
 
     // happens one time in the first frame
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gm = GameObject.Find("gamemanager").GetComponent<gamemanager>();
     }
     // Update is called once per frame
     void Update()

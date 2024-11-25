@@ -35,6 +35,7 @@ public class astroedcontroler : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
+            gm.PlayerDie();
             Destroy(collision.gameObject);
         }
     }
