@@ -27,7 +27,6 @@ public class Playercontroler : MonoBehaviour
         //rotashion
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
-
         //shooting
         if(Input.GetButtonDown("Fire1"))
         {
