@@ -37,7 +37,7 @@ public class SpawnManager : MonoBehaviour
     {
         float randomX = Random.Range(xMin, xMax);
         float randomZ = Random.Range(zMin, zMax);
-        Vector3 randomPos = new Vector3(randomX, 0, randomZ);
+        Vector3 randomPos = new Vector3(randomX, 1, randomZ);
         while((randomPos - player.transform.position).magnitude < gm.safetyRadius)
         {
             randomX = Random.Range(xMin, xMax);

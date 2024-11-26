@@ -22,6 +22,7 @@ public class gamemanager : MonoBehaviour
     public GameObject gameOverDisplay;
     public Vector3 spawnPoint = Vector3.zero;
     public GameObject playerPrefab;
+    public float launchForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +71,7 @@ public class gamemanager : MonoBehaviour
             {
                 if((enemy.transform.position - spawnPoint).magnitude < safetyRadius)
                 {
-                    enemy.GetComponent<Rigidbody>().AddForce((enemy.transform.position - spawnPoint).normalized * 10, ForceMode.Impulse);
+                    enemy.GetComponent<Rigidbody>().AddForce((enemy.transform.position - spawnPoint).normalized * launchForce, ForceMode.Impulse);
                     canSpawn = false;
                 }
             }
@@ -81,9 +82,21 @@ public class gamemanager : MonoBehaviour
 
 
     }
+
+    public void GameOver()
+    {
+        gameOverDisplay.SetActive(true);
+    }
     public void PlayerDie()
     {
         LoseLife();
-        StartCoroutine(RespawnPlayer());
+        if (lives < 0)
+        {
+            GameOver();
+        }
+        else
+        {
+            StartCoroutine(RespawnPlayer());
+        }
     }
 }
