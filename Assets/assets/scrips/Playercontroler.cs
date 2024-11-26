@@ -28,14 +28,14 @@ public class Playercontroler : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
         //shooting
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Shoot"))
         {
             Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
         }
     }
     private void FixedUpdate()
     {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Move"))
         {
             rb.AddRelativeForce(Vector3.forward  * thrustfForce);
         }
