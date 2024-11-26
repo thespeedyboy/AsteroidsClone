@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class gamemanager : MonoBehaviour
 {
     public int score;
@@ -86,6 +87,7 @@ public class gamemanager : MonoBehaviour
     public void GameOver()
     {
         gameOverDisplay.SetActive(true);
+        StartCoroutine(RestartGame());
     }
     public void PlayerDie()
     {
@@ -98,5 +100,11 @@ public class gamemanager : MonoBehaviour
         {
             StartCoroutine(RespawnPlayer());
         }
+    }
+
+    IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("TitleScreen");
     }
 }

@@ -120,8 +120,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   smallerAsteroid: {fileID: 4049544772573825293, guid: 29bf04ca2056bfb4dbb15e6bb81e99f6, type: 3}
   SmallerAsteroidtoSpawn: 2
-  forceRange: 5
-  torqueRange: 10
+  forceRange: 2
+  torqueRange: 2
 --- !u!114 &6647534863584636096
 MonoBehaviour:
   m_ObjectHideFlags: 0

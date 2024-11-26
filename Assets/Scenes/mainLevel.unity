@@ -574,12 +574,13 @@ MonoBehaviour:
   xMin: -14
   zMax: 10
   zMin: -10
-  safetyRadius: 0
+  safetyRadius: 5
   maxLives: 3
   livesDisplay: {fileID: 1241119444}
   gameOverDisplay: {fileID: 2082718555}
   spawnPoint: {x: 0, y: 0, z: 0}
   playerPrefab: {fileID: 8938796170019021840, guid: 53de54cd7e3a0fd48bc4d912f966206f, type: 3}
+  launchForce: 5
 --- !u!4 &1038113540
 Transform:
   m_ObjectHideFlags: 0
@@ -803,7 +804,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lives : 3'
+  m_text: 'Lives : 3
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

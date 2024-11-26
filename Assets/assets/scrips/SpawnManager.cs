@@ -42,7 +42,7 @@ public class SpawnManager : MonoBehaviour
         {
             randomX = Random.Range(xMin, xMax);
             randomZ = Random.Range(zMin, zMax);
-            randomPos = new Vector3(randomX, 0, randomZ);
+            randomPos = new Vector3(randomX, 1, randomZ);
         }
 
         return randomPos;
